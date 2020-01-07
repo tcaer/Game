@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://main/gem_dot.png" type="Texture" id=1]
+
+
+
+[node name="Player_Trajectory_Dot" type="KinematicBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )

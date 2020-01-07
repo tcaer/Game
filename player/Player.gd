@@ -59,7 +59,5 @@ func rotate_sprite():
 		var offset_vector = position - get_viewport().get_mouse_position()
 		player_sprite.rotation = offset_vector.angle()
 		
-func calculate_position_at_time(elapsed_time, launch_velocity):
-	var initial_position = position
-	
-	return weight * elapsed_time * elapsed_time * 0.5 + launch_velocity * elapsed_time + initial_position
+func hit_by_gem():
+	print('Hit by gem!')
