@@ -1,16 +1,13 @@
 extends Area2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+onready var gem_tracker = get_parent().get_parent().get_node('Gem_Tracker')
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	connect("body_entered", self, "_on_body_enter")
 
 func _on_body_enter(body):
-	print('Collision')
-	
 	match body.get_name():
 		'Player':
 			body.hit_by_gem()
+			
+			gem_tracker.decrease_num_gems(self)
